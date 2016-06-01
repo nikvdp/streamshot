@@ -179,7 +179,7 @@ from a TCP socket to the UNIX one, which can be done with socat. Run this comman
 $ socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
 ```
 
-And that is pretty much. The IP address of the X server is already configured in the docker
+And that is pretty much it. The IP address of the X server is already configured in the docker
 container (it belongs to the private network created by vagrant). In the container:
 
 ```
