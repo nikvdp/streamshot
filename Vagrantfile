@@ -89,11 +89,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.name = "streamshot"
   end
 
-  # Set a private network between the box and the host
-  config.vm.network "private_network", ip: VAGRANT_PRIVATE_IP
-
   # Install Ubuntu 15.10 on the new box
   config.vm.box = "ubuntu/wily64"
+
+  # Set hostname
+  config.vm.hostname = "streamshot"
+
+  # Set a private network between the box and the host
+  config.vm.network "private_network", ip: VAGRANT_PRIVATE_IP
 
   # Shared folder
   config.vm.synced_folder LOCAL_FOLDER, "/home/vagrant/projects", create: true
