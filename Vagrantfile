@@ -90,7 +90,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # Install Ubuntu 15.10 on the new box
-  config.vm.box = "ubuntu/wily64"
+  config.vm.box = "http://mirrors.ustc.edu.cn/ubuntu-cloud-images/vagrant/wily/current/wily-server-cloudimg-amd64-vagrant-disk1.box"
 
   # Set hostname
   config.vm.hostname = "streamshot"
